@@ -1,10 +1,12 @@
+@use "vars";
+
 html,
 body {
 	height: 100%;
 }
 
 body {
-	color: $default-color;
+	color: vars.$default-color;
 	font-size: 16px;
 	line-height: 26px;
 	@extend %quicksand-500;
@@ -12,8 +14,32 @@ body {
 	flex-direction: column;
 }
 
+.main {
+	flex-grow: 1;
+}
+
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
+}
+
+a {
+    font-size: 16px;
+    line-height: 26px;
+    color: vars.$default-color;
+    @extend %quicksand-500;
+}
+
+// General Stiles
+%button {
+    @extend %roboto-400;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: vars.$accent-color;
+    box-shadow: 0 10px 25px rgba(254, 62, 87, 0.3);
+    padding: 15px 40px;
+    cursor: pointer;
 }
